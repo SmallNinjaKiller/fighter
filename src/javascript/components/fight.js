@@ -1,5 +1,7 @@
 import { controls } from '../../constants/controls';
 
+const chance = Math.random() * 1 + 1;
+
 export async function fight(firstFighter, secondFighter) {
   return new Promise((resolve) => {
     // resolve the promise with the winner when fight is over
@@ -8,12 +10,15 @@ export async function fight(firstFighter, secondFighter) {
 
 export function getDamage(attacker, defender) {
   // return damage
+  return getHitPower(attacker) - getBlockPower(defender);
 }
 
 export function getHitPower(fighter) {
   // return hit power
+  return power = fighter.attack * chance;
 }
 
 export function getBlockPower(fighter) {
   // return block power
+  return power = fighter.defence * chance;
 }
