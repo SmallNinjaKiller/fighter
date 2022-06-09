@@ -1,6 +1,7 @@
 import { createElement } from '../helpers/domHelper';
 import { createFighterImage } from './fighterPreview';
 import { fight } from './fight';
+import versusImg from '../../../resources/versus.png';
 import { showWinnerModal } from './modal/winner';
 
 export async function renderArena(selectedFighters) {
@@ -28,12 +29,20 @@ function createArena(selectedFighters) {
 
 function createHealthIndicators(leftFighter, rightFighter) {
   const healthIndicators = createElement({ tagName: 'div', className: 'arena___fight-status' });
-  const versusSign = createElement({ tagName: 'div', className: 'arena___versus-sign' });
+  const versusSign = createVersusBlockForFight();
   const leftFighterIndicator = createHealthIndicator(leftFighter, 'left');
   const rightFighterIndicator = createHealthIndicator(rightFighter, 'right');
 
   healthIndicators.append(leftFighterIndicator, versusSign, rightFighterIndicator);
   return healthIndicators;
+}
+
+function createVersusBlockForFight () {
+  const versusblock = createElement({ tagName: 'div', className: 'arena___versus-sign'});
+  const image = createElement({ tagName: 'img', className: 'preview-container___versus-img', attributes: { src: versusImg }});
+  versusblock.append(image);
+
+  return versusblock;
 }
 
 function createHealthIndicator(fighter, position) {
