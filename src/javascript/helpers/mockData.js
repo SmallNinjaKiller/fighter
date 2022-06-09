@@ -29,6 +29,11 @@ export const fighters = [
     name: 'Bison',
     source: 'http://www.fightersgeneration.com/np5/char/ssf2hd/bison-hdstance.gif',
   },
+  {
+    _id: '7',
+    name: 'Bulka',
+    source: 'https://media3.giphy.com/media/5QRtIHJTH1bzYf5GXg/giphy.gif?cid=ecf05e476ib43jy53w0iw906qbjivkoshbbjgs0epa6a7qry&rid=giphy.gif&ct=g',
+  },
 ];
 
 export const fightersDetails = [
@@ -79,5 +84,13 @@ export const fightersDetails = [
     attack: 5,
     defense: 4,
     source: 'http://www.fightersgeneration.com/np5/char/ssf2hd/bison-hdstance.gif',
+  },
+  {
+    _id: '7',
+    name: 'Bulka',
+    health: 100,
+    attack: 4,
+    defense: 5,
+    source: 'https://media3.giphy.com/media/5QRtIHJTH1bzYf5GXg/giphy.gif?cid=ecf05e476ib43jy53w0iw906qbjivkoshbbjgs0epa6a7qry&rid=giphy.gif&ct=g',
   },
 ];
