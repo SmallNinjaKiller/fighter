@@ -53,7 +53,7 @@ function createVersusBlock(selectedFighters) {
   const image = createElement({ tagName: 'img', className: 'preview-container___versus-img', attributes: { src: versusImg } });
   const disabledBtn = canStartFight ? '' : 'disabled';
   const fightBtn = createElement({ tagName: 'button', className: `preview-container___fight-btn ${disabledBtn}` });
-  const changeButton = createElement({ tagName: 'button', className: `preview-container___fight-btn ${disabledBtn}` })
+  const changeButton = createElement({ tagName: 'button', className: `preview-container___change-btn ${disabledBtn}` })
 
   fightBtn.addEventListener('click', onClick, false);
   changeButton.addEventListener('click', () => { location.reload()});
