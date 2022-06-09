@@ -50,20 +50,16 @@ function createVersusBlock(selectedFighters) {
   const canStartFight = selectedFighters.filter(Boolean).length === 2;
   const onClick = () => startFight(selectedFighters);
   const container = createElement({ tagName: 'div', className: 'preview-container___versus-block' });
-  const image = createElement({
-    tagName: 'img',
-    className: 'preview-container___versus-img',
-    attributes: { src: versusImg },
-  });
+  const image = createElement({ tagName: 'img', className: 'preview-container___versus-img', attributes: { src: versusImg } });
   const disabledBtn = canStartFight ? '' : 'disabled';
-  const fightBtn = createElement({
-    tagName: 'button',
-    className: `preview-container___fight-btn ${disabledBtn}`,
-  });
+  const fightBtn = createElement({ tagName: 'button', className: `preview-container___fight-btn ${disabledBtn}` });
+  const changeButton = createElement({ tagName: 'button', className: `preview-container___fight-btn ${disabledBtn}` })
 
   fightBtn.addEventListener('click', onClick, false);
+  changeButton.addEventListener('click', () => { location.reload()});
   fightBtn.innerText = 'Fight';
-  container.append(image, fightBtn);
+  changeButton.innerText = 'Change';
+  container.append(image, fightBtn, changeButton);
 
   return container;
 }
