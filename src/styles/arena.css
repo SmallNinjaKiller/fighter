@@ -57,6 +57,10 @@
 }
 
 .arena___health-bar {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
   height: 100%;
   width: 100%;
   background-color: #ebd759;

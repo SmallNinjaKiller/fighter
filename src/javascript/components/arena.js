@@ -14,8 +14,8 @@ export async function renderArena(selectedFighters) {
   // todo:
   // - start the fight
   // - when fight is finished show winner
-  const Winner = await fight(...selectedFighters);
-  showWinnerModal(Winner);
+  const winner = await fight(selectedFighters);
+  showWinnerModal(winner);
 }
 
 function createArena(selectedFighters) {
@@ -46,13 +46,14 @@ function createVersusBlockForFight () {
 }
 
 function createHealthIndicator(fighter, position) {
-  const { name } = fighter;
+  const { name, health} = fighter;
   const container = createElement({ tagName: 'div', className: 'arena___fighter-indicator' });
   const fighterName = createElement({ tagName: 'span', className: 'arena___fighter-name' });
   const indicator = createElement({ tagName: 'div', className: 'arena___health-indicator' });
   const bar = createElement({ tagName: 'div', className: 'arena___health-bar', attributes: { id: `${position}-fighter-indicator` }});
 
   fighterName.innerText = name;
+  bar.innerText = health;
   indicator.append(bar);
   container.append(fighterName, indicator);
 

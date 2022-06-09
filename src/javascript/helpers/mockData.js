@@ -1,3 +1,5 @@
+import bulka from '../../../resources/Bulka.png';
+
 export const fighters = [
   {
     _id: '1',
@@ -32,7 +34,7 @@ export const fighters = [
   {
     _id: '7',
     name: 'Bulka',
-    source: 'https://media3.giphy.com/media/5QRtIHJTH1bzYf5GXg/giphy.gif?cid=ecf05e476ib43jy53w0iw906qbjivkoshbbjgs0epa6a7qry&rid=giphy.gif&ct=g',
+    source: bulka,
   },
 ];
 
@@ -91,6 +93,6 @@ export const fightersDetails = [
     health: 100,
     attack: 4,
     defense: 5,
-    source: 'https://media3.giphy.com/media/5QRtIHJTH1bzYf5GXg/giphy.gif?cid=ecf05e476ib43jy53w0iw906qbjivkoshbbjgs0epa6a7qry&rid=giphy.gif&ct=g',
+    source: bulka,
   },
 ];
